@@ -28,35 +28,37 @@ data class Story(
 )
 
 class MainActivity : ComponentActivity() {
+
+    private val listStories = listOf(
+        Story(
+            "Praia bonita",
+            "Davenport, California",
+            R.drawable.header,
+            "December 2018"
+        ),
+        Story(
+            "Muito bonita",
+            "Ilhéus, Bahia",
+            R.drawable.header,
+            "July 2017"
+        ),
+        Story(
+            "Belíssima",
+            "Tokyo, Japão",
+            R.drawable.header,
+            "January 2020"
+        ),
+        Story(
+            "Show de bola",
+            "Roma, Itália",
+            R.drawable.header,
+            "May 2006"
+        )
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val listStories = listOf(
-                Story(
-                    "Praia bonita",
-                    "Davenport, California",
-                    R.drawable.header,
-                    "December 2018"
-                ),
-                Story(
-                    "Muito bonita",
-                    "Ilhéus, Bahia",
-                    R.drawable.header,
-                    "July 2017"
-                ),
-                Story(
-                    "Belíssima",
-                    "Tokyo, Japão",
-                    R.drawable.header,
-                    "January 2020"
-                ),
-                Story(
-                    "Show de bola",
-                    "Roma, Itália",
-                    R.drawable.header,
-                    "May 2006"
-                )
-            )
             LazyColumn(
                 verticalArrangement = Arrangement.spacedBy(4.dp)
             ) {
